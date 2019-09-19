@@ -17,7 +17,19 @@
     <title>Hackathon - SpaceX Launch Event</title>
     <script>
 
+    function  launch(){
+   let fullName=document.getElementById("fullName").value;
+   document.getElementById("outPutFullName").innerHTML=fullName;
+   let email=document.getElementById("email").value;
+   document.getElementById("OutPutEmail").innerHTML=email;
+   let mobileNumber=document.getElementById("phoneNumber").value;
+   document.getElementById("outPutPhoneNumber").innerHTML=mobileNumber;
+   let company=document.getElementById("companyName").value;
+   let state=document.getElementById("state").value;
+   document.getElementById("outPutCompanyName").innerHTML=state+ " , " + company;
             // Add your JavaScript code here
+
+        }
 
     </script>
 </head>
@@ -37,26 +49,26 @@
             <div class="col-md-6">
                 <div class="form-group">
                     <label>Full name</label>
-                    <input type="{{FILL_OUT}}" class="form-control" id="{{FILL_OUT}}" />
+                    <input type="text" class="form-control" id="fullName" />
                 </div>
                 <div class="form-group">
                     <label>Email</label>
-                    <input type="{{FILL_OUT}}" class="form-control" id="{{FILL_OUT}}" />
+                    <input type="email" class="form-control" id="email" />
                 </div>
                 <div class="form-group">
-                    <label>Mobile Number</label>
-                    <input type="{{FILL_OUT}}" class="form-control" id="{{FILL_OUT}}" placeholder="nnn-nnn-nnnn" />
+                    <label>Mobile Number pattern</label>
+                    <input type="text" class="form-control" id="phoneNumber" placeholder="nnn-nnn-nnnn" />
                 </div>
                 <div class="form-group">
                     <label>Company</label>
-                    <input type="{{FILL_OUT}}" class="form-control" id="{{FILL_OUT}}" />
+                    <input type="text" class="form-control" id="companyName" required/>
                 </div>
                 <div class="form-group">
                     <label>State</label>
-                    <input type="{{FILL_OUT}}" class="form-control" id="{{FILL_OUT}}" />
+                    <input type="text" class="form-control" id="state" />
                 </div>
                 <div class="form-group">
-                    <input type="{{FILL_OUT}}" class="btn btn-primary" value="Launch" />
+                    <input onclick="launch()" type="button" class="btn btn-primary" value="Launch" />
                 </div>
             </div>
             <div class="col-md-6">
@@ -64,10 +76,10 @@
                     <div class="card">
                         <img src="spaceship.jpg" class="spaceship" alt="Spaceship">
                         <div class="card-body">
-                            <h5 class="card-title" id="{{FILL_OUT}}">{{FILL_OUT_FULL_NAME}}</h5>
-                            <p class="card-text" id="{{FILL_OUT}}">{{FILL_OUT_COMPANY_NAME}}, {{FILL_OUT_STATE}}</p>
-                            <p class="card-text" id="{{FILL_OUT}}">{{FILL_OUT_PHONE_NUMBER}}</p>
-                            <p class="card-text" id="{{FILL_OUT}}">{{FILL_OUT_EMAIL_ADDRESS}}</p>
+                            <h5 class="card-title" id="outPutFullName">{{FILL_OUT_FULL_NAME}}</h5>
+                            <p class="card-text" id="outPutCompanyName" >{{FILL_OUT_COMPANY_NAME}}, {{FILL_OUT_STATE}}</p>
+                            <p class="card-text" id="outPutPhoneNumber">{{FILL_OUT_PHONE_NUMBER}}</p>
+                            <p class="card-text" id="OutPutEmail">{{FILL_OUT_EMAIL_ADDRESS}}</p>
                         </div>
                         <div class="card-body">
                             <img id="barcode" alt="barcode">
